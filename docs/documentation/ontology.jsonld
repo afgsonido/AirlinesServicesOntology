@@ -1,0 +1,714 @@
+[ {
+  "@id" : "_:genid1",
+  "@type" : [ "http://www.w3.org/2000/01/rdf-schema#Datatype" ],
+  "http://www.w3.org/2002/07/owl#onDatatype" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#int"
+  } ],
+  "http://www.w3.org/2002/07/owl#withRestrictions" : [ {
+    "@list" : [ {
+      "@id" : "_:genid5"
+    }, {
+      "@id" : "_:genid3"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid10",
+  "@type" : [ "http://www.w3.org/2003/11/swrl#Imp" ],
+  "http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "@value" : "true"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The review is verified if the trip has a aircraft"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "isVerifiedByAircraft"
+  } ],
+  "http://www.w3.org/2003/11/swrl#body" : [ {
+    "@list" : [ {
+      "@id" : "_:genid18"
+    }, {
+      "@id" : "_:genid16"
+    }, {
+      "@id" : "_:genid14"
+    }, {
+      "@id" : "_:genid12"
+    } ]
+  } ],
+  "http://www.w3.org/2003/11/swrl#head" : [ {
+    "@list" : [ {
+      "@id" : "_:genid20"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid12",
+  "@type" : [ "http://www.w3.org/2003/11/swrl#IndividualPropertyAtom" ],
+  "http://www.w3.org/2003/11/swrl#argument1" : [ {
+    "@id" : "http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/t"
+  } ],
+  "http://www.w3.org/2003/11/swrl#argument2" : [ {
+    "@id" : "http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/a"
+  } ],
+  "http://www.w3.org/2003/11/swrl#propertyPredicate" : [ {
+    "@id" : "http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/hasAAircraft"
+  } ]
+}, {
+  "@id" : "_:genid14",
+  "@type" : [ "http://www.w3.org/2003/11/swrl#ClassAtom" ],
+  "http://www.w3.org/2003/11/swrl#argument1" : [ {
+    "@id" : "http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/a"
+  } ],
+  "http://www.w3.org/2003/11/swrl#classPredicate" : [ {
+    "@id" : "http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/Aircraft"
+  } ]
+}, {
+  "@id" : "_:genid16",
+  "@type" : [ "http://www.w3.org/2003/11/swrl#ClassAtom" ],
+  "http://www.w3.org/2003/11/swrl#argument1" : [ {
+    "@id" : "http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/t"
+  } ],
+  "http://www.w3.org/2003/11/swrl#classPredicate" : [ {
+    "@id" : "http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/Trip"
+  } ]
+}, {
+  "@id" : "_:genid18",
+  "@type" : [ "http://www.w3.org/2003/11/swrl#ClassAtom" ],
+  "http://www.w3.org/2003/11/swrl#argument1" : [ {
+    "@id" : "http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/r"
+  } ],
+  "http://www.w3.org/2003/11/swrl#classPredicate" : [ {
+    "@id" : "http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/Review"
+  } ]
+}, {
+  "@id" : "_:genid20",
+  "@type" : [ "http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom" ],
+  "http://www.w3.org/2003/11/swrl#argument1" : [ {
+    "@id" : "http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/r"
+  } ],
+  "http://www.w3.org/2003/11/swrl#argument2" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "@value" : "true"
+  } ],
+  "http://www.w3.org/2003/11/swrl#propertyPredicate" : [ {
+    "@id" : "http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/isVerified"
+  } ]
+}, {
+  "@id" : "_:genid21",
+  "@type" : [ "http://www.w3.org/2003/11/swrl#Imp" ],
+  "http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "@value" : "true"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The review is verified if it has a traveler who writes a review"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "isVerifiedByTraveller"
+  } ],
+  "http://www.w3.org/2003/11/swrl#body" : [ {
+    "@list" : [ {
+      "@id" : "_:genid33"
+    }, {
+      "@id" : "_:genid31"
+    }, {
+      "@id" : "_:genid29"
+    }, {
+      "@id" : "_:genid27"
+    }, {
+      "@id" : "_:genid25"
+    }, {
+      "@id" : "_:genid23"
+    } ]
+  } ],
+  "http://www.w3.org/2003/11/swrl#head" : [ {
+    "@list" : [ {
+      "@id" : "_:genid35"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid23",
+  "@type" : [ "http://www.w3.org/2003/11/swrl#IndividualPropertyAtom" ],
+  "http://www.w3.org/2003/11/swrl#argument1" : [ {
+    "@id" : "http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/t"
+  } ],
+  "http://www.w3.org/2003/11/swrl#argument2" : [ {
+    "@id" : "http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/p"
+  } ],
+  "http://www.w3.org/2003/11/swrl#propertyPredicate" : [ {
+    "@id" : "http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/makesATrip"
+  } ]
+}, {
+  "@id" : "_:genid25",
+  "@type" : [ "http://www.w3.org/2003/11/swrl#IndividualPropertyAtom" ],
+  "http://www.w3.org/2003/11/swrl#argument1" : [ {
+    "@id" : "http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/p"
+  } ],
+  "http://www.w3.org/2003/11/swrl#argument2" : [ {
+    "@id" : "http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/r"
+  } ],
+  "http://www.w3.org/2003/11/swrl#propertyPredicate" : [ {
+    "@id" : "http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/hasAReview"
+  } ]
+}, {
+  "@id" : "_:genid27",
+  "@type" : [ "http://www.w3.org/2003/11/swrl#IndividualPropertyAtom" ],
+  "http://www.w3.org/2003/11/swrl#argument1" : [ {
+    "@id" : "http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/t"
+  } ],
+  "http://www.w3.org/2003/11/swrl#argument2" : [ {
+    "@id" : "http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/r"
+  } ],
+  "http://www.w3.org/2003/11/swrl#propertyPredicate" : [ {
+    "@id" : "http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/writesAReview"
+  } ]
+}, {
+  "@id" : "_:genid29",
+  "@type" : [ "http://www.w3.org/2003/11/swrl#ClassAtom" ],
+  "http://www.w3.org/2003/11/swrl#argument1" : [ {
+    "@id" : "http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/p"
+  } ],
+  "http://www.w3.org/2003/11/swrl#classPredicate" : [ {
+    "@id" : "http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/Trip"
+  } ]
+}, {
+  "@id" : "_:genid3",
+  "http://www.w3.org/2001/XMLSchema#maxInclusive" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#int",
+    "@value" : "10"
+  } ]
+}, {
+  "@id" : "_:genid31",
+  "@type" : [ "http://www.w3.org/2003/11/swrl#ClassAtom" ],
+  "http://www.w3.org/2003/11/swrl#argument1" : [ {
+    "@id" : "http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/r"
+  } ],
+  "http://www.w3.org/2003/11/swrl#classPredicate" : [ {
+    "@id" : "http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/Review"
+  } ]
+}, {
+  "@id" : "_:genid33",
+  "@type" : [ "http://www.w3.org/2003/11/swrl#ClassAtom" ],
+  "http://www.w3.org/2003/11/swrl#argument1" : [ {
+    "@id" : "http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/t"
+  } ],
+  "http://www.w3.org/2003/11/swrl#classPredicate" : [ {
+    "@id" : "http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/Traveller"
+  } ]
+}, {
+  "@id" : "_:genid35",
+  "@type" : [ "http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom" ],
+  "http://www.w3.org/2003/11/swrl#argument1" : [ {
+    "@id" : "http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/r"
+  } ],
+  "http://www.w3.org/2003/11/swrl#argument2" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "@value" : "true"
+  } ],
+  "http://www.w3.org/2003/11/swrl#propertyPredicate" : [ {
+    "@id" : "http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/isVerified"
+  } ]
+}, {
+  "@id" : "_:genid5",
+  "http://www.w3.org/2001/XMLSchema#minInclusive" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#int",
+    "@value" : "0"
+  } ]
+}, {
+  "@id" : "_:genid6",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/writesAReview"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/Review"
+  } ]
+}, {
+  "@id" : "_:genid7",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/hasAReview"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/Review"
+  } ]
+}, {
+  "@id" : "_:genid8",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/hasATraveller"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/Traveller"
+  } ]
+}, {
+  "@id" : "_:genid9",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onClass" : [ {
+    "@id" : "http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/Aircraft"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/hasAAircraft"
+  } ],
+  "http://www.w3.org/2002/07/owl#qualifiedCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ]
+}, {
+  "@id" : "http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ]
+}, {
+  "@id" : "http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2#1-10rating",
+  "@type" : [ "http://www.w3.org/2000/01/rdf-schema#Datatype" ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "_:genid1"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2#Wifi&Connectivity",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Wifi & Connectivity rating"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Wifi & Connectivity"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/Rating"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2#hasADestination",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/Destination"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/Country"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2#hasAnOrigin",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/Origin"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/Country"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/Aircraft",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Aircraft used in a trip operated by a company"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Aircraft"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#sameAs" : [ {
+    "@value" : "https://es.dbpedia.org/page/Avi%C3%B3n"
+  } ],
+  "http://www.w3.org/2002/07/owl#disjointWith" : [ {
+    "@id" : "http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/Country"
+  }, {
+    "@id" : "http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/Date"
+  }, {
+    "@id" : "http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/Review"
+  }, {
+    "@id" : "http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/Traveller"
+  }, {
+    "@id" : "http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/Trip"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/Boeing_737-800",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/Aircraft"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/CabinStaffService",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Cabin staff service rating"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Cabin Staff Service"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/Rating"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/Comment",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Text written by the costumer that represents his/her opinions"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Comment"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/Review"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/Country",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A world country to consider as a destiny or origin"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Country"
+  } ],
+  "http://www.w3.org/2002/07/owl#disjointWith" : [ {
+    "@id" : "http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/Date"
+  }, {
+    "@id" : "http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/Review"
+  }, {
+    "@id" : "http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/Traveller"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/Date",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Date of the trip"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Date"
+  } ],
+  "http://www.w3.org/2002/07/owl#disjointWith" : [ {
+    "@id" : "http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/Traveller"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/Destination",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Trip destination"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Destination"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/Trip"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/GroundService",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Ground service rating"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Ground Service"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/Rating"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/InflightEntertainment",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "In-flight entertainment rating"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "In-Flight Entertainment"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/Rating"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/Juan_Pérez",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/makesATrip" : [ {
+    "@id" : "http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/ViajeACanarias"
+  } ],
+  "http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/writesAReview" : [ {
+    "@id" : "http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/ViajeACanariasReview"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/Traveller"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/Origin",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Trip origin"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Origin"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/Trip"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/OverallRating",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Overall service rating"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Overall Rating"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/Rating"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/Rating",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Group of numeric data that expresses the costumer opinion"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Rating"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/Review"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/Recommended",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "If it is recommended or not by the costumer"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Recommended"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/Rating"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/Review",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Review made by a company customer"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Review"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/SeatComfort",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Seat comfort rating"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Seat Comfort"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/Rating"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/SeatType",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Seat type choosed by the costumer"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Seat Type"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/Trip"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/Title",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Title of the review"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Title"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/Review"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/Traveller",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Traveller who does a trip and writes a review"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Traveller"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "_:genid6"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/Trip",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Trip done by a costumer"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Trip"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "_:genid7"
+  }, {
+    "@id" : "_:genid8"
+  }, {
+    "@id" : "_:genid9"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/TypeOfTraveller",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/Traveller"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/ValueForMoney",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Value For Money"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/Rating"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/ViajeACanarias",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/hasAAircraft" : [ {
+    "@id" : "http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/Boeing_737-800"
+  } ],
+  "http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/hasAReview" : [ {
+    "@id" : "http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/ViajeACanariasReview"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/Trip"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/ViajeACanariasRating",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/hasARating" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#int",
+    "@value" : "5"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/OverallRating"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/ViajeACanariasRevComment",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/hasAComment" : [ {
+    "@value" : "El vuelo se retrasó dos horas y no me dieron ninguna explicación"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/Comment"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/ViajeACanariasRevTitle",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/hasATitle" : [ {
+    "@value" : "No lo recomiendo"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/Title"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/ViajeACanariasReview",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/Review"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/a",
+  "@type" : [ "http://www.w3.org/2003/11/swrl#Variable" ]
+}, {
+  "@id" : "http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/hasAAircraft",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/Trip"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/Aircraft"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/hasAComment",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/Comment"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/hasADate",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/Trip"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/Date"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/hasARating",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/Rating"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#int"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/hasAReview",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/Trip"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/Review"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/hasATitle",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/Title"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/hasATraveller",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/Trip"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/Traveller"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/isVerified",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/Trip"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/makesATrip",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/Trip"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/Traveller"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/p",
+  "@type" : [ "http://www.w3.org/2003/11/swrl#Variable" ]
+}, {
+  "@id" : "http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/r",
+  "@type" : [ "http://www.w3.org/2003/11/swrl#Variable" ]
+}, {
+  "@id" : "http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/t",
+  "@type" : [ "http://www.w3.org/2003/11/swrl#Variable" ]
+}, {
+  "@id" : "http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/writesAReview",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/Traveller"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/Review"
+  } ]
+}, {
+  "@id" : "http://www.w3.org/2000/01/rdf-schema#sameAs",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+} ]

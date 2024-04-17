@@ -1,0 +1,1298 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<link rel="stylesheet" href="resources/primer.css" media="screen"/>
+<link rel="stylesheet" href="resources/rec.css" media="screen"/>
+<link rel="stylesheet" href="resources/extra.css" media="screen"/>
+<link rel="stylesheet" href="resources/owl.css" media="screen"/>
+<link rel="stylesheet" href="resources/dark.css" media="(prefers-color-scheme: dark)"/>
+<link rel="stylesheet" href="resources/light.css" media="(prefers-color-scheme: light)"/>
+<link rel="stylesheet" href="resources/slider.css" media="screen"/>
+<meta name="color-scheme" content="dark light">
+<script type="module" src="resources/dark-mode-toggle.mjs"></script><div class="darkmode">
+	<dark-mode-toggle class="slider"></dark-mode-toggle>
+</div>
+ <title>AirlinesServicesOntology</title>
+
+
+<!-- SCHEMA.ORG METADATA -->
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2","image":"http://vowl.visualdataweb.org/webvowl/#iri=http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2","name":"AirlinesServicesOntology", "headline":"Document describing the ontology http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2", "dateReleased":"17-4-2024", "dateModified":"17-4-2024", "version":"1.0", "license":"null", "author":[{"@type":"Person","name":"Adolfo Fernandez"}]}</script>
+
+<script src="resources/jquery.js"></script> 
+<script src="resources/marked.min.js"></script> 
+    <script> 
+function loadHash() {
+  jQuery(".markdown").each(function(el){jQuery(this).after(marked.parse(jQuery(this).text())).remove()});
+	var hash = location.hash;
+	if($(hash).offset()!=null){
+	  $('html, body').animate({scrollTop: $(hash).offset().top}, 0);
+}
+	loadTOC();
+}
+function loadTOC(){
+	//process toc dynamically
+	  var t='<h2>Table of contents</h2><ul>';i = 1;j=0;
+	  jQuery(".list").each(function(){
+		if(jQuery(this).is('h2')){
+			if(j>0){
+				t+='</ul>';
+				j=0;
+			}
+			t+= '<li>'+i+'. <a href=#'+ jQuery(this).attr('id')+'>'+ jQuery(this).ignore("span").text()+'</a></li>';
+			i++;
+		}
+		if(jQuery(this).is('h3')){
+			if(j==0){
+				t+='<ul>';
+			}
+			j++;
+			t+= '<li>'+(i-1)+'.'+j+'. '+'<a href=#'+ jQuery(this).attr('id')+'>'+ jQuery(this).ignore("span").text()+'</a></li>';
+		}
+	  });
+	  t+='</ul>';
+	  $("#toc").html(t); 
+}
+$(function(){
+    loadHash();
+}); $.fn.ignore = function(sel){
+        return this.clone().find(sel||">*").remove().end();
+ }; 
+   </script> 
+  </head> 
+
+<body>
+<div class="container">
+<div class="head">
+<div style="float:right">language <a href="index-en.html"><b>en</b></a> </div>
+<h1>AirlinesServicesOntology</h1>
+<h2>Release: 17-4-2024</h2>
+
+
+<dl>
+<dt>Modified on: 17-4-2024</dt>
+<dt>This version:</dt>
+<dd><a href="http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2">http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2</a></dd>
+<dt>Latest version:</dt>
+<dd><a href="http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2">http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2</a></dd>
+<dt>Previous version:</dt>
+<dd><a href="http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2">http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2</a></dd>
+<dt>Revision:</dt>
+<dd>1.0</dd>
+<dt>Issued on:</dt>
+<dd>Date issued</dd>
+<dt>Authors:</dt>
+<dd>Adolfo Fernandez</dd>
+
+<dt>Download serialization:</dt><dd><span><a href="ontology.jsonld" target="_blank"><img src="https://img.shields.io/badge/Format-JSON_LD-blue.svg" alt="JSON-LD" /></a> </span><span><a href="ontology.owl" target="_blank"><img src="https://img.shields.io/badge/Format-RDF/XML-blue.svg" alt="RDF/XML" /></a> </span><span><a href="ontology.nt" target="_blank"><img src="https://img.shields.io/badge/Format-N_Triples-blue.svg" alt="N-Triples" /></a> </span><span><a href="ontology.ttl" target="_blank"><img src="https://img.shields.io/badge/Format-TTL-blue.svg" alt="TTL" /></a> </span></dd><dt>License:</dt><dd><a href="null" target="_blank"><img src="https://img.shields.io/badge/License-null-blue.svg" alt="null" /></a>
+<a href="null" rel="license" target="_blank">
+<img src="null" style="border-width:0" alt="License" />
+</a>
+<br/></dd><dt>Visualization:</dt><dd><a href="webvowl/index.html#" target="_blank"><img src="https://img.shields.io/badge/Visualize_with-WebVowl-blue.svg" alt="Visualize with WebVowl" /></a></dd>
+<dt>Evaluation:</dt><dd><a href="OOPSevaluation/oopsEval.html#" target="_blank"><img src="https://img.shields.io/badge/Evaluate_with-OOPS! (OntOlogy Pitfall Scanner!)-blue.svg" alt="Evaluate with OOPS!" /></a></dd></dl>
+
+<a href="provenance/provenance-en.html" target="_blank">Provenance of this page</a><hr/>
+</div>
+<div class="status">
+<div>
+<span>Ontology Specification Draft</span>
+</div>
+</div>     <div id="abstract"><h2>Abstract</h2><span class="markdown">
+This is a placeholder text for the abstract. The abstract should contain a couple of sentences summarizing the ontology and its purpose.</span>
+</div>
+<div id="toc"></div> 
+
+<!--INTRODUCTION SECTION-->
+    <div id="introduction"><h2 id="intro" class="list">Introduction <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<span class="markdown">Ontology for airlines services</span>
+</div>
+  
+
+<!--OVERVIEW SECTION-->
+    <div id="overview"><h2 id="overv" class="list">AirlinesServicesOntology: Overview <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<span class="markdown">
+This ontology has the following classes and properties.</span>
+<h4>Classes</h4>
+<ul xmlns:widoco="https://w3id.org/widoco/vocab#"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    class="hlist">
+   <li>
+      <a href="#/Aircraft"
+         title="http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/Aircraft">Aircraft</a>
+   </li>
+   <li>
+      <a href="#/CabinStaffService"
+         title="http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/CabinStaffService">Cabin Staff Service</a>
+   </li>
+   <li>
+      <a href="#/Comment"
+         title="http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/Comment">Comment</a>
+   </li>
+   <li>
+      <a href="#/Country"
+         title="http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/Country">Country</a>
+   </li>
+   <li>
+      <a href="#/Date"
+         title="http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/Date">Date</a>
+   </li>
+   <li>
+      <a href="#/Destination"
+         title="http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/Destination">Destination</a>
+   </li>
+   <li>
+      <a href="#/GroundService"
+         title="http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/GroundService">Ground Service</a>
+   </li>
+   <li>
+      <a href="#/InflightEntertainment"
+         title="http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/InflightEntertainment">In-Flight Entertainment</a>
+   </li>
+   <li>
+      <a href="#/Origin"
+         title="http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/Origin">Origin</a>
+   </li>
+   <li>
+      <a href="#/OverallRating"
+         title="http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/OverallRating">Overall Rating</a>
+   </li>
+   <li>
+      <a href="#/Rating"
+         title="http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/Rating">Rating</a>
+   </li>
+   <li>
+      <a href="#/Recommended"
+         title="http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/Recommended">Recommended</a>
+   </li>
+   <li>
+      <a href="#/Review"
+         title="http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/Review">Review</a>
+   </li>
+   <li>
+      <a href="#/SeatComfort"
+         title="http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/SeatComfort">Seat Comfort</a>
+   </li>
+   <li>
+      <a href="#/SeatType"
+         title="http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/SeatType">Seat Type</a>
+   </li>
+   <li>
+      <a href="#/Title"
+         title="http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/Title">Title</a>
+   </li>
+   <li>
+      <a href="#/Traveller"
+         title="http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/Traveller">Traveller</a>
+   </li>
+   <li>
+      <a href="#/Trip"
+         title="http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/Trip">Trip</a>
+   </li>
+   <li>
+      <a href="#/TypeOfTraveller"
+         title="http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/TypeOfTraveller">
+         <span>Type Of Traveller</span>
+      </a>
+   </li>
+   <li>
+      <a href="#/ValueForMoney"
+         title="http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/ValueForMoney">Value For Money</a>
+   </li>
+   <li>
+      <a href="#Wifi&Connectivity"
+         title="http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2#Wifi&amp;Connectivity">Wifi &amp; Connectivity</a>
+   </li>
+</ul><h4>Object Properties</h4><ul xmlns:widoco="https://w3id.org/widoco/vocab#"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    class="hlist">
+   <li>
+      <a href="#/hasAAircraft"
+         title="http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/hasAAircraft">
+         <span>has A Aircraft</span>
+      </a>
+   </li>
+   <li>
+      <a href="#/hasADate"
+         title="http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/hasADate">
+         <span>has A Date</span>
+      </a>
+   </li>
+   <li>
+      <a href="#hasADestination"
+         title="http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2#hasADestination">
+         <span>has A Destination</span>
+      </a>
+   </li>
+   <li>
+      <a href="#/hasAReview"
+         title="http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/hasAReview">
+         <span>has A Review</span>
+      </a>
+   </li>
+   <li>
+      <a href="#/hasATraveller"
+         title="http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/hasATraveller">
+         <span>has A Traveller</span>
+      </a>
+   </li>
+   <li>
+      <a href="#hasAnOrigin"
+         title="http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2#hasAnOrigin">
+         <span>has An Origin</span>
+      </a>
+   </li>
+   <li>
+      <a href="#/makesATrip"
+         title="http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/makesATrip">
+         <span>makes A Trip</span>
+      </a>
+   </li>
+   <li>
+      <a href="#/writesAReview"
+         title="http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/writesAReview">
+         <span>writes A Review</span>
+      </a>
+   </li>
+</ul><h4>Data Properties</h4><ul xmlns:widoco="https://w3id.org/widoco/vocab#"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    class="hlist">
+   <li>
+      <a href="#/hasAComment"
+         title="http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/hasAComment">
+         <span>has A Comment</span>
+      </a>
+   </li>
+   <li>
+      <a href="#/hasARating"
+         title="http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/hasARating">
+         <span>has A Rating</span>
+      </a>
+   </li>
+   <li>
+      <a href="#/hasATitle"
+         title="http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/hasATitle">
+         <span>has A Title</span>
+      </a>
+   </li>
+   <li>
+      <a href="#/isVerified"
+         title="http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/isVerified">
+         <span>is Verified</span>
+      </a>
+   </li>
+</ul><h4>Annotation Properties</h4><ul xmlns:widoco="https://w3id.org/widoco/vocab#"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    class="hlist">
+   <li>
+      <a href="#http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"
+         title="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled">
+         <span>is Rule Enabled</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://www.w3.org/2000/01/rdf-schema#sameAs" title="http://www.w3.org/2000/01/rdf-schema#sameAs">
+         <span>same As</span>
+      </a>
+   </li>
+</ul><h4>Named Individuals</h4><ul xmlns:widoco="https://w3id.org/widoco/vocab#"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    class="hlist">
+   <li>
+      <a href="#/Boeing_737-800"
+         title="http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/Boeing_737-800">
+         <span>Boeing 737 800</span>
+      </a>
+   </li>
+   <li>
+      <a href="#/Juan_Pérez"
+         title="http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/Juan_Pérez">
+         <span>Juan Pérez</span>
+      </a>
+   </li>
+   <li>
+      <a href="#/ViajeACanarias"
+         title="http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/ViajeACanarias">
+         <span>Viaje A Canarias</span>
+      </a>
+   </li>
+   <li>
+      <a href="#/ViajeACanariasRating"
+         title="http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/ViajeACanariasRating">
+         <span>Viaje A Canarias Rating</span>
+      </a>
+   </li>
+   <li>
+      <a href="#/ViajeACanariasRevComment"
+         title="http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/ViajeACanariasRevComment">
+         <span>Viaje A Canarias Rev Comment</span>
+      </a>
+   </li>
+   <li>
+      <a href="#/ViajeACanariasRevTitle"
+         title="http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/ViajeACanariasRevTitle">
+         <span>Viaje A Canarias Rev Title</span>
+      </a>
+   </li>
+   <li>
+      <a href="#/ViajeACanariasReview"
+         title="http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/ViajeACanariasReview">
+         <span>Viaje A Canarias Review</span>
+      </a>
+   </li>
+</ul><h4> SWRL Rules </h4><ul xmlns:widoco="https://w3id.org/widoco/vocab#"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    class="hlist">
+   <li>
+      <a href="#d4e588">isVerifiedByAircraft</a>
+   </li>
+   <li>
+      <a href="#d4e712">isVerifiedByTraveller</a>
+   </li>
+</ul><iframe src="webvowl/index.html"></iframe> 
+</div>
+  
+
+<!--DESCRIPTION SECTION-->
+    <div id="description"><h2 id="desc" class="list">AirlinesServicesOntology: Description <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+
+<span class="markdown">Ontology for airlines services</span></div>
+   
+
+<!--CROSSREF SECTION-->
+   <div id="crossref"><h2 id="crossreference" class="list">Cross-reference for AirlinesServicesOntology classes, object properties and data properties <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+This section provides details for each class and property defined by AirlinesServicesOntology.
+<div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="classes">
+ <h3 id="classes-headline" class="list">Classes</h3>
+ <ul class="hlist">
+  <li><a href="#/Aircraft" title="http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/Aircraft">Aircraft</a></li>
+  <li><a href="#/CabinStaffService" title="http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/CabinStaffService">Cabin Staff Service</a></li>
+  <li><a href="#/Comment" title="http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/Comment">Comment</a></li>
+  <li><a href="#/Country" title="http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/Country">Country</a></li>
+  <li><a href="#/Date" title="http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/Date">Date</a></li>
+  <li><a href="#/Destination" title="http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/Destination">Destination</a></li>
+  <li><a href="#/GroundService" title="http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/GroundService">Ground Service</a></li>
+  <li><a href="#/InflightEntertainment" title="http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/InflightEntertainment">In-Flight Entertainment</a></li>
+  <li><a href="#/Origin" title="http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/Origin">Origin</a></li>
+  <li><a href="#/OverallRating" title="http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/OverallRating">Overall Rating</a></li>
+  <li><a href="#/Rating" title="http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/Rating">Rating</a></li>
+  <li><a href="#/Recommended" title="http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/Recommended">Recommended</a></li>
+  <li><a href="#/Review" title="http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/Review">Review</a></li>
+  <li><a href="#/SeatComfort" title="http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/SeatComfort">Seat Comfort</a></li>
+  <li><a href="#/SeatType" title="http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/SeatType">Seat Type</a></li>
+  <li><a href="#/Title" title="http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/Title">Title</a></li>
+  <li><a href="#/Traveller" title="http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/Traveller">Traveller</a></li>
+  <li><a href="#/Trip" title="http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/Trip">Trip</a></li>
+  <li><a href="#/TypeOfTraveller" title="http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/TypeOfTraveller"> <span>Type Of Traveller</span> </a></li>
+  <li><a href="#/ValueForMoney" title="http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/ValueForMoney">Value For Money</a></li>
+  <li><a href="#Wifi&Connectivity" title="http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2#Wifi&amp;Connectivity">Wifi &amp; Connectivity</a></li>
+ </ul>
+ <div class="entity" id="/Aircraft">
+  <h3>Aircraft<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/Aircraft</p>
+  <div class="comment">
+   <span class="markdown">Aircraft used in a trip operated by a company</span>
+  </div>
+  <dl class="description">
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#/hasAAircraft" title="http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/hasAAircraft">has A Aircraft</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    has members
+   </dt>
+   <dd>
+    <a href="#/Boeing_737-800" title="http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/Boeing_737-800">Boeing 737 800</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dt>
+    is disjoint with
+   </dt>
+   <dd>
+    <a href="#/Country" title="http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/Country">Country</a> <sup class="type-c" title="class">c</sup>, <a href="#/Date" title="http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/Date">Date</a> <sup class="type-c" title="class">c</sup>, <a href="#/Review" title="http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/Review">Review</a> <sup class="type-c" title="class">c</sup>, <a href="#/Traveller" title="http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/Traveller">Traveller</a> <sup class="type-c" title="class">c</sup>, <a href="#/Trip" title="http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/Trip">Trip</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="/CabinStaffService">
+  <h3>Cabin Staff Service<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/CabinStaffService</p>
+  <div class="comment">
+   <span class="markdown">Cabin staff service rating</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#/Rating" title="http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/Rating">Rating</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="/Comment">
+  <h3>Comment<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/Comment</p>
+  <div class="comment">
+   <span class="markdown">Text written by the costumer that represents his/her opinions</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#/Review" title="http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/Review">Review</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#/hasAComment" title="http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/hasAComment">has A Comment</a> <sup class="type-dp" title="data property">dp</sup>
+   </dd>
+   <dt>
+    has members
+   </dt>
+   <dd>
+    <a href="#/ViajeACanariasRevComment" title="http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/ViajeACanariasRevComment">Viaje A Canarias Rev Comment</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="/Country">
+  <h3>Country<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/Country</p>
+  <div class="comment">
+   <span class="markdown">A world country to consider as a destiny or origin</span>
+  </div>
+  <dl class="description">
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#hasADestination" title="http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2#hasADestination">has A Destination</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasAnOrigin" title="http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2#hasAnOrigin">has An Origin</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    is disjoint with
+   </dt>
+   <dd>
+    <a href="#/Aircraft" title="http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/Aircraft">Aircraft</a> <sup class="type-c" title="class">c</sup>, <a href="#/Date" title="http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/Date">Date</a> <sup class="type-c" title="class">c</sup>, <a href="#/Review" title="http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/Review">Review</a> <sup class="type-c" title="class">c</sup>, <a href="#/Traveller" title="http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/Traveller">Traveller</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="/Date">
+  <h3>Date<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/Date</p>
+  <div class="comment">
+   <span class="markdown">Date of the trip</span>
+  </div>
+  <dl class="description">
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#/hasADate" title="http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/hasADate">has A Date</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    is disjoint with
+   </dt>
+   <dd>
+    <a href="#/Aircraft" title="http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/Aircraft">Aircraft</a> <sup class="type-c" title="class">c</sup>, <a href="#/Country" title="http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/Country">Country</a> <sup class="type-c" title="class">c</sup>, <a href="#/Traveller" title="http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/Traveller">Traveller</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="/Destination">
+  <h3>Destination<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/Destination</p>
+  <div class="comment">
+   <span class="markdown">Trip destination</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#/Trip" title="http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/Trip">Trip</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#hasADestination" title="http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2#hasADestination">has A Destination</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="/GroundService">
+  <h3>Ground Service<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/GroundService</p>
+  <div class="comment">
+   <span class="markdown">Ground service rating</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#/Rating" title="http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/Rating">Rating</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="/InflightEntertainment">
+  <h3>In-Flight Entertainment<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/InflightEntertainment</p>
+  <div class="comment">
+   <span class="markdown">In-flight entertainment rating</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#/Rating" title="http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/Rating">Rating</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="/Origin">
+  <h3>Origin<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/Origin</p>
+  <div class="comment">
+   <span class="markdown">Trip origin</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#/Trip" title="http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/Trip">Trip</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#hasAnOrigin" title="http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2#hasAnOrigin">has An Origin</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="/OverallRating">
+  <h3>Overall Rating<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/OverallRating</p>
+  <div class="comment">
+   <span class="markdown">Overall service rating</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#/Rating" title="http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/Rating">Rating</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has members
+   </dt>
+   <dd>
+    <a href="#/ViajeACanariasRating" title="http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/ViajeACanariasRating">Viaje A Canarias Rating</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="/Rating">
+  <h3>Rating<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/Rating</p>
+  <div class="comment">
+   <span class="markdown">Group of numeric data that expresses the costumer opinion</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#/Review" title="http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/Review">Review</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#/CabinStaffService" title="http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/CabinStaffService">Cabin Staff Service</a> <sup class="type-c" title="class">c</sup>, <a href="#/GroundService" title="http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/GroundService">Ground Service</a> <sup class="type-c" title="class">c</sup>, <a href="#/InflightEntertainment" title="http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/InflightEntertainment">In-Flight Entertainment</a> <sup class="type-c" title="class">c</sup>, <a href="#/OverallRating" title="http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/OverallRating">Overall Rating</a> <sup class="type-c" title="class">c</sup>, <a href="#/Recommended" title="http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/Recommended">Recommended</a> <sup class="type-c" title="class">c</sup>, <a href="#/SeatComfort" title="http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/SeatComfort">Seat Comfort</a> <sup class="type-c" title="class">c</sup>, <a href="#/ValueForMoney" title="http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/ValueForMoney">Value For Money</a> <sup class="type-c" title="class">c</sup>, <a href="#Wifi&Connectivity" title="http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2#Wifi&amp;Connectivity">Wifi &amp; Connectivity</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#/hasARating" title="http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/hasARating">has A Rating</a> <sup class="type-dp" title="data property">dp</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="/Recommended">
+  <h3>Recommended<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/Recommended</p>
+  <div class="comment">
+   <span class="markdown">If it is recommended or not by the costumer</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#/Rating" title="http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/Rating">Rating</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="/Review">
+  <h3>Review<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/Review</p>
+  <div class="comment">
+   <span class="markdown">Review made by a company customer</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#/Comment" title="http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/Comment">Comment</a> <sup class="type-c" title="class">c</sup>, <a href="#/Rating" title="http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/Rating">Rating</a> <sup class="type-c" title="class">c</sup>, <a href="#/Title" title="http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/Title">Title</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#/hasAReview" title="http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/hasAReview">has A Review</a> <sup class="type-op" title="object property">op</sup>, <a href="#/writesAReview" title="http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/writesAReview">writes A Review</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    has members
+   </dt>
+   <dd>
+    <a href="#/ViajeACanariasReview" title="http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/ViajeACanariasReview">Viaje A Canarias Review</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dt>
+    is disjoint with
+   </dt>
+   <dd>
+    <a href="#/Aircraft" title="http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/Aircraft">Aircraft</a> <sup class="type-c" title="class">c</sup>, <a href="#/Country" title="http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/Country">Country</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="/SeatComfort">
+  <h3>Seat Comfort<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/SeatComfort</p>
+  <div class="comment">
+   <span class="markdown">Seat comfort rating</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#/Rating" title="http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/Rating">Rating</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="/SeatType">
+  <h3>Seat Type<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/SeatType</p>
+  <div class="comment">
+   <span class="markdown">Seat type choosed by the costumer</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#/Trip" title="http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/Trip">Trip</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="/Title">
+  <h3>Title<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/Title</p>
+  <div class="comment">
+   <span class="markdown">Title of the review</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#/Review" title="http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/Review">Review</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#/hasATitle" title="http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/hasATitle">has A Title</a> <sup class="type-dp" title="data property">dp</sup>
+   </dd>
+   <dt>
+    has members
+   </dt>
+   <dd>
+    <a href="#/ViajeACanariasRevTitle" title="http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/ViajeACanariasRevTitle">Viaje A Canarias Rev Title</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="/Traveller">
+  <h3>Traveller<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/Traveller</p>
+  <div class="comment">
+   <span class="markdown">Traveller who does a trip and writes a review</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd></dd>
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#/TypeOfTraveller" title="http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/TypeOfTraveller">Type Of Traveller</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#/writesAReview" title="http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/writesAReview">writes A Review</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#/hasATraveller" title="http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/hasATraveller">has A Traveller</a> <sup class="type-op" title="object property">op</sup>, <a href="#/makesATrip" title="http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/makesATrip">makes A Trip</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    has members
+   </dt>
+   <dd>
+    <a href="#/Juan_Pérez" title="http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/Juan_Pérez">Juan Pérez</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dt>
+    is disjoint with
+   </dt>
+   <dd>
+    <a href="#/Aircraft" title="http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/Aircraft">Aircraft</a> <sup class="type-c" title="class">c</sup>, <a href="#/Country" title="http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/Country">Country</a> <sup class="type-c" title="class">c</sup>, <a href="#/Date" title="http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/Date">Date</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="/Trip">
+  <h3>Trip<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/Trip</p>
+  <div class="comment">
+   <span class="markdown">Trip done by a costumer</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd></dd>
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#/Destination" title="http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/Destination">Destination</a> <sup class="type-c" title="class">c</sup>, <a href="#/Origin" title="http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/Origin">Origin</a> <sup class="type-c" title="class">c</sup>, <a href="#/SeatType" title="http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/SeatType">Seat Type</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#/hasAAircraft" title="http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/hasAAircraft">has A Aircraft</a> <sup class="type-op" title="object property">op</sup>, <a href="#/hasADate" title="http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/hasADate">has A Date</a> <sup class="type-op" title="object property">op</sup>, <a href="#/hasAReview" title="http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/hasAReview">has A Review</a> <sup class="type-op" title="object property">op</sup>, <a href="#/hasATraveller" title="http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/hasATraveller">has A Traveller</a> <sup class="type-op" title="object property">op</sup>, <a href="#/isVerified" title="http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/isVerified">is Verified</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#/makesATrip" title="http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/makesATrip">makes A Trip</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    has members
+   </dt>
+   <dd>
+    <a href="#/ViajeACanarias" title="http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/ViajeACanarias">Viaje A Canarias</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dt>
+    is disjoint with
+   </dt>
+   <dd>
+    <a href="#/Aircraft" title="http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/Aircraft">Aircraft</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="/TypeOfTraveller">
+  <h3>Type Of Traveller<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/TypeOfTraveller</p>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#/Traveller" title="http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/Traveller">Traveller</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="/ValueForMoney">
+  <h3>Value For Money<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/ValueForMoney</p>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#/Rating" title="http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/Rating">Rating</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Wifi&Connectivity">
+  <h3>Wifi &amp; Connectivity<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2#Wifi&amp;Connectivity</p>
+  <div class="comment">
+   <span class="markdown">Wifi &amp; Connectivity rating</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#/Rating" title="http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/Rating">Rating</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+</div><div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="objectproperties">
+ <h3 id="properties" class="list">Object Properties</h3>
+ <ul class="hlist">
+  <li><a href="#/hasAAircraft" title="http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/hasAAircraft"> <span>has A Aircraft</span> </a></li>
+  <li><a href="#/hasADate" title="http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/hasADate"> <span>has A Date</span> </a></li>
+  <li><a href="#hasADestination" title="http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2#hasADestination"> <span>has A Destination</span> </a></li>
+  <li><a href="#/hasAReview" title="http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/hasAReview"> <span>has A Review</span> </a></li>
+  <li><a href="#/hasATraveller" title="http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/hasATraveller"> <span>has A Traveller</span> </a></li>
+  <li><a href="#hasAnOrigin" title="http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2#hasAnOrigin"> <span>has An Origin</span> </a></li>
+  <li><a href="#/makesATrip" title="http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/makesATrip"> <span>makes A Trip</span> </a></li>
+  <li><a href="#/writesAReview" title="http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/writesAReview"> <span>writes A Review</span> </a></li>
+ </ul>
+ <div class="entity" id="/hasAAircraft">
+  <h3>has A Aircraft<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/hasAAircraft</p>
+  <div class="description">
+   <p><strong>has characteristics: </strong> functional</p>
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#/Trip" title="http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/Trip">Trip</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#/Aircraft" title="http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/Aircraft">Aircraft</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="/hasADate">
+  <h3>has A Date<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/hasADate</p>
+  <div class="description">
+   <p><strong>has characteristics: </strong> functional</p>
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#/Trip" title="http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/Trip">Trip</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#/Date" title="http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/Date">Date</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasADestination">
+  <h3>has A Destination<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2#hasADestination</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#/Destination" title="http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/Destination">Destination</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#/Country" title="http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/Country">Country</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="/hasAReview">
+  <h3>has A Review<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/hasAReview</p>
+  <div class="description">
+   <p><strong>has characteristics: </strong> functional</p>
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#/Trip" title="http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/Trip">Trip</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#/Review" title="http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/Review">Review</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="/hasATraveller">
+  <h3>has A Traveller<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/hasATraveller</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#/Trip" title="http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/Trip">Trip</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#/Traveller" title="http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/Traveller">Traveller</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasAnOrigin">
+  <h3>has An Origin<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2#hasAnOrigin</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#/Origin" title="http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/Origin">Origin</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#/Country" title="http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/Country">Country</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="/makesATrip">
+  <h3>makes A Trip<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/makesATrip</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#/Trip" title="http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/Trip">Trip</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#/Traveller" title="http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/Traveller">Traveller</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="/writesAReview">
+  <h3>writes A Review<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/writesAReview</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#/Traveller" title="http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/Traveller">Traveller</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#/Review" title="http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/Review">Review</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+</div><div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="dataproperties">
+ <h3 id="dataproperties-headline" class="list">Data Properties</h3>
+ <ul class="hlist">
+  <li><a href="#/hasAComment" title="http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/hasAComment"> <span>has A Comment</span> </a></li>
+  <li><a href="#/hasARating" title="http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/hasARating"> <span>has A Rating</span> </a></li>
+  <li><a href="#/hasATitle" title="http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/hasATitle"> <span>has A Title</span> </a></li>
+  <li><a href="#/isVerified" title="http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/isVerified"> <span>is Verified</span> </a></li>
+ </ul>
+ <div class="entity" id="/hasAComment">
+  <h3>has A Comment<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/hasAComment</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#/Comment" title="http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/Comment">Comment</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="/hasARating">
+  <h3>has A Rating<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/hasARating</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#/Rating" title="http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/Rating">Rating</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#int" target="_blank" title="http://www.w3.org/2001/XMLSchema#int">int</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="/hasATitle">
+  <h3>has A Title<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/hasATitle</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#/Title" title="http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/Title">Title</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="/isVerified">
+  <h3>is Verified<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/isVerified</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#/Trip" title="http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/Trip">Trip</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#boolean" target="_blank" title="http://www.w3.org/2001/XMLSchema#boolean">boolean</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+</div><div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="annotationproperties">
+ <h3 id="annotationproperties" class="list">Annotation Properties</h3>
+ <ul class="hlist">
+  <li><a href="#http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled" title="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"> <span>is Rule Enabled</span> </a></li>
+  <li><a href="#http://www.w3.org/2000/01/rdf-schema#sameAs" title="http://www.w3.org/2000/01/rdf-schema#sameAs"> <span>same As</span> </a></li>
+ </ul>
+ <div class="entity" id="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled">
+  <h3>is Rule Enabled<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled</p>
+ </div>
+ <div class="entity" id="http://www.w3.org/2000/01/rdf-schema#sameAs">
+  <h3>same As<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/2000/01/rdf-schema#sameAs</p>
+ </div>
+</div><div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="namedindividuals">
+ <h3 id="namedindividuals" class="list">Named Individuals</h3>
+ <ul class="hlist">
+  <li><a href="#/Boeing_737-800" title="http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/Boeing_737-800"> <span>Boeing 737 800</span> </a></li>
+  <li><a href="#/Juan_Pérez" title="http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/Juan_Pérez"> <span>Juan Pérez</span> </a></li>
+  <li><a href="#/ViajeACanarias" title="http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/ViajeACanarias"> <span>Viaje A Canarias</span> </a></li>
+  <li><a href="#/ViajeACanariasRating" title="http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/ViajeACanariasRating"> <span>Viaje A Canarias Rating</span> </a></li>
+  <li><a href="#/ViajeACanariasRevComment" title="http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/ViajeACanariasRevComment"> <span>Viaje A Canarias Rev Comment</span> </a></li>
+  <li><a href="#/ViajeACanariasRevTitle" title="http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/ViajeACanariasRevTitle"> <span>Viaje A Canarias Rev Title</span> </a></li>
+  <li><a href="#/ViajeACanariasReview" title="http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/ViajeACanariasReview"> <span>Viaje A Canarias Review</span> </a></li>
+ </ul>
+ <div class="entity" id="/Boeing_737-800">
+  <h3>Boeing 737 800<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/Boeing_737-800</p>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#/Aircraft" title="http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/Aircraft">Aircraft</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="/Juan_Pérez">
+  <h3>Juan Pérez<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/Juan_Pérez</p>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#/Traveller" title="http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/Traveller">Traveller</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="#/makesATrip" title="http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/makesATrip">makes A Trip</a> <sup class="type-op" title="object property">op</sup> <a href="#/ViajeACanarias" title="http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/ViajeACanarias">Viaje A Canarias</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="#/writesAReview" title="http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/writesAReview">writes A Review</a> <sup class="type-op" title="object property">op</sup> <a href="#/ViajeACanariasReview" title="http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/ViajeACanariasReview">Viaje A Canarias Review</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="/ViajeACanarias">
+  <h3>Viaje A Canarias<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/ViajeACanarias</p>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#/Trip" title="http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/Trip">Trip</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="#/hasAAircraft" title="http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/hasAAircraft">has A Aircraft</a> <sup class="type-op" title="object property">op</sup> <a href="#/Boeing_737-800" title="http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/Boeing_737-800">Boeing 737 800</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="#/hasAReview" title="http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/hasAReview">has A Review</a> <sup class="type-op" title="object property">op</sup> <a href="#/ViajeACanariasReview" title="http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/ViajeACanariasReview">Viaje A Canarias Review</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="/ViajeACanariasRating">
+  <h3>Viaje A Canarias Rating<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/ViajeACanariasRating</p>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#/OverallRating" title="http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/OverallRating">Overall Rating</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="#/hasARating" title="http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/hasARating">has A Rating</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"5"^^<a href="http://www.w3.org/2001/XMLSchema#int" target="_blank" title="http://www.w3.org/2001/XMLSchema#int">int</a> </span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="/ViajeACanariasRevComment">
+  <h3>Viaje A Canarias Rev Comment<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/ViajeACanariasRevComment</p>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#/Comment" title="http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/Comment">Comment</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="#/hasAComment" title="http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/hasAComment">has A Comment</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"El vuelo se retrasó dos horas y no me dieron ninguna explicación"</span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="/ViajeACanariasRevTitle">
+  <h3>Viaje A Canarias Rev Title<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/ViajeACanariasRevTitle</p>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#/Title" title="http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/Title">Title</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="#/hasATitle" title="http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/hasATitle">has A Title</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"No lo recomiendo"</span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="/ViajeACanariasReview">
+  <h3>Viaje A Canarias Review<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/ViajeACanariasReview</p>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#/Review" title="http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/Review">Review</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+</div><div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="swrlrules">
+ <h3 id="swrlrules" class="list">SWRL rules</h3>
+ <ul class="hlist">
+  <li><a href="#d4e588">isVerifiedByAircraft</a></li>
+  <li><a href="#d4e712">isVerifiedByTraveller</a></li>
+ </ul>
+ <div class="entity" id="d4e588">
+  <h3>isVerifiedByAircraft<span class="backlink">back to <a href="#toc">ToC</a> or <a href="#swrlrules">SWRL ToC</a> </span></h3>
+  <p>The review is verified if the trip has a aircraft<br><br><a href="#/Review" title="http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/Review">Review</a> <sup class="type-c" title="class">c</sup>(?) , <a href="#/Trip" title="http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/Trip">Trip</a> <sup class="type-c" title="class">c</sup>(?) , <a href="#/Aircraft" title="http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/Aircraft">Aircraft</a> <sup class="type-c" title="class">c</sup>(?) , <a href="#/hasAAircraft" title="http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/hasAAircraft">has A Aircraft</a> <sup class="type-op" title="object property">op</sup>(?,?) -&gt; <a href="#/isVerified" title="http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/isVerified">is Verified</a> <sup class="type-dp" title="data property">dp</sup>(?,"true"^^<a href="http://www.w3.org/2001/XMLSchema#boolean" target="_blank" title="http://www.w3.org/2001/XMLSchema#boolean">boolean</a>)</p>
+ </div>
+ <div class="entity" id="d4e712">
+  <h3>isVerifiedByTraveller<span class="backlink">back to <a href="#toc">ToC</a> or <a href="#swrlrules">SWRL ToC</a> </span></h3>
+  <p>The review is verified if it has a traveler who writes a review<br><br><a href="#/Traveller" title="http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/Traveller">Traveller</a> <sup class="type-c" title="class">c</sup>(?) , <a href="#/Review" title="http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/Review">Review</a> <sup class="type-c" title="class">c</sup>(?) , <a href="#/Trip" title="http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/Trip">Trip</a> <sup class="type-c" title="class">c</sup>(?) , <a href="#/writesAReview" title="http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/writesAReview">writes A Review</a> <sup class="type-op" title="object property">op</sup>(?,?) , <a href="#/hasAReview" title="http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/hasAReview">has A Review</a> <sup class="type-op" title="object property">op</sup>(?,?) , <a href="#/makesATrip" title="http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/makesATrip">makes A Trip</a> <sup class="type-op" title="object property">op</sup>(?,?) -&gt; <a href="#/isVerified" title="http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/isVerified">is Verified</a> <sup class="type-dp" title="data property">dp</sup>(?,"true"^^<a href="http://www.w3.org/2001/XMLSchema#boolean" target="_blank" title="http://www.w3.org/2001/XMLSchema#boolean">boolean</a>)</p>
+ </div>
+</div><div id="legend">
+<h2>Legend <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<div   class="entity">
+<sup class="type-c" title="Classes">c</sup>: Classes <br/>
+<sup class="type-op" title="Object Properties">op</sup>: Object Properties <br/>
+<sup class="type-dp" title="Data Properties">dp</sup>: Data Properties <br/>
+<sup class="type-ni" title="Named Individuals">ni</sup>: Named Individuals <br/>
+</div>
+</div>
+</div>
+    
+
+<!--REFERENCES SECTION-->
+  <div id="references">
+<h2 id="ref" class="list">References <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<span class="markdown">
+Add your references here. It is recommended to have them as a list.</span>
+
+</div>
+   
+
+<!--CHANGELOG SECTION-->
+   <div id="changelog">null</div>
+<div id="acknowledgments">
+<h2 id="ack" class="list">Acknowledgments <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<p>
+The authors would like to thank <a href="http://www.essepuntato.it/">Silvio Peroni</a> for developing <a href="http://www.essepuntato.it/lode">LODE</a>, a Live OWL Documentation Environment, which is used for representing the Cross Referencing Section of this document and <a href="https://w3id.org/people/dgarijo">Daniel Garijo</a> for developing <a href="https://github.com/dgarijo/Widoco">Widoco</a>, the program used to create the template used in this documentation.</p>
+</div>
+
+
+</div>
+</body>
+</html>

@@ -1,0 +1,443 @@
+@prefix : <http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2#> .
+
+<http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2> rdf:type owl:Ontology .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled
+<http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2000/01/rdf-schema#sameAs
+rdfs:sameAs rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Datatypes
+#################################################################
+
+###  http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2#1-10rating
+<http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2#1-10rating> rdf:type rdfs:Datatype ;
+                                                                          owl:equivalentClass [ rdf:type rdfs:Datatype ;
+                                                                                                owl:onDatatype xsd:int ;
+                                                                                                owl:withRestrictions ( [ xsd:minInclusive "0"^^xsd:int
+                                                                                                                       ]
+                                                                                                                       [ xsd:maxInclusive "10"^^xsd:int
+                                                                                                                       ]
+                                                                                                                     )
+                                                                                              ] .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2#hasADestination
+:hasADestination rdf:type owl:ObjectProperty ;
+                 rdfs:domain <http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/Destination> ;
+                 rdfs:range <http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/Country> .
+
+
+###  http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2#hasAnOrigin
+:hasAnOrigin rdf:type owl:ObjectProperty ;
+             rdfs:domain <http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/Origin> ;
+             rdfs:range <http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/Country> .
+
+
+###  http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/hasAAircraft
+<http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/hasAAircraft> rdf:type owl:ObjectProperty ,
+                                                                                     owl:FunctionalProperty ;
+                                                                            rdfs:domain <http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/Trip> ;
+                                                                            rdfs:range <http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/Aircraft> .
+
+
+###  http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/hasADate
+<http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/hasADate> rdf:type owl:ObjectProperty ,
+                                                                                 owl:FunctionalProperty ;
+                                                                        rdfs:domain <http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/Trip> ;
+                                                                        rdfs:range <http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/Date> .
+
+
+###  http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/hasAReview
+<http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/hasAReview> rdf:type owl:ObjectProperty ,
+                                                                                   owl:FunctionalProperty ;
+                                                                          rdfs:domain <http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/Trip> ;
+                                                                          rdfs:range <http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/Review> .
+
+
+###  http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/hasATraveller
+<http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/hasATraveller> rdf:type owl:ObjectProperty ;
+                                                                             rdfs:domain <http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/Trip> ;
+                                                                             rdfs:range <http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/Traveller> .
+
+
+###  http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/makesATrip
+<http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/makesATrip> rdf:type owl:ObjectProperty ;
+                                                                          rdfs:domain <http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/Trip> ;
+                                                                          rdfs:range <http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/Traveller> .
+
+
+###  http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/writesAReview
+<http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/writesAReview> rdf:type owl:ObjectProperty ;
+                                                                             rdfs:domain <http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/Traveller> ;
+                                                                             rdfs:range <http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/Review> .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/hasAComment
+<http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/hasAComment> rdf:type owl:DatatypeProperty ;
+                                                                           rdfs:domain <http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/Comment> ;
+                                                                           rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/hasARating
+<http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/hasARating> rdf:type owl:DatatypeProperty ;
+                                                                          rdfs:domain <http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/Rating> ;
+                                                                          rdfs:range xsd:int .
+
+
+###  http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/hasATitle
+<http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/hasATitle> rdf:type owl:DatatypeProperty ;
+                                                                         rdfs:domain <http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/Title> ;
+                                                                         rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/isVerified
+<http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/isVerified> rdf:type owl:DatatypeProperty ;
+                                                                          rdfs:domain <http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/Trip> ;
+                                                                          rdfs:range xsd:boolean .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2#Wifi&Connectivity
+<http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2#Wifi&Connectivity> rdf:type owl:Class ;
+                                                                                 rdfs:subClassOf <http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/Rating> ;
+                                                                                 rdfs:comment "Wifi & Connectivity rating" ;
+                                                                                 rdfs:label "Wifi & Connectivity" .
+
+
+###  http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/Aircraft
+<http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/Aircraft> rdf:type owl:Class ;
+                                                                        owl:disjointWith <http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/Country> ,
+                                                                                         <http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/Date> ,
+                                                                                         <http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/Review> ,
+                                                                                         <http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/Traveller> ,
+                                                                                         <http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/Trip> ;
+                                                                        rdfs:comment "Aircraft used in a trip operated by a company" ;
+                                                                        rdfs:label "Aircraft" ;
+                                                                        rdfs:sameAs "https://es.dbpedia.org/page/Avi%C3%B3n" .
+
+
+###  http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/CabinStaffService
+<http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/CabinStaffService> rdf:type owl:Class ;
+                                                                                 rdfs:subClassOf <http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/Rating> ;
+                                                                                 rdfs:comment "Cabin staff service rating" ;
+                                                                                 rdfs:label "Cabin Staff Service" .
+
+
+###  http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/Comment
+<http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/Comment> rdf:type owl:Class ;
+                                                                       rdfs:subClassOf <http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/Review> ;
+                                                                       rdfs:comment "Text written by the costumer that represents his/her opinions" ;
+                                                                       rdfs:label "Comment" .
+
+
+###  http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/Country
+<http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/Country> rdf:type owl:Class ;
+                                                                       owl:disjointWith <http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/Date> ,
+                                                                                        <http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/Review> ,
+                                                                                        <http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/Traveller> ;
+                                                                       rdfs:comment "A world country to consider as a destiny or origin" ;
+                                                                       rdfs:label "Country" .
+
+
+###  http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/Date
+<http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/Date> rdf:type owl:Class ;
+                                                                    owl:disjointWith <http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/Traveller> ;
+                                                                    rdfs:comment "Date of the trip" ;
+                                                                    rdfs:label "Date" .
+
+
+###  http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/Destination
+<http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/Destination> rdf:type owl:Class ;
+                                                                           rdfs:subClassOf <http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/Trip> ;
+                                                                           rdfs:comment "Trip destination" ;
+                                                                           rdfs:label "Destination" .
+
+
+###  http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/GroundService
+<http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/GroundService> rdf:type owl:Class ;
+                                                                             rdfs:subClassOf <http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/Rating> ;
+                                                                             rdfs:comment "Ground service rating" ;
+                                                                             rdfs:label "Ground Service" .
+
+
+###  http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/InflightEntertainment
+<http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/InflightEntertainment> rdf:type owl:Class ;
+                                                                                     rdfs:subClassOf <http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/Rating> ;
+                                                                                     rdfs:comment "In-flight entertainment rating" ;
+                                                                                     rdfs:label "In-Flight Entertainment" .
+
+
+###  http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/Origin
+<http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/Origin> rdf:type owl:Class ;
+                                                                      rdfs:subClassOf <http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/Trip> ;
+                                                                      rdfs:comment "Trip origin" ;
+                                                                      rdfs:label "Origin" .
+
+
+###  http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/OverallRating
+<http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/OverallRating> rdf:type owl:Class ;
+                                                                             rdfs:subClassOf <http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/Rating> ;
+                                                                             rdfs:comment "Overall service rating" ;
+                                                                             rdfs:label "Overall Rating" .
+
+
+###  http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/Rating
+<http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/Rating> rdf:type owl:Class ;
+                                                                      rdfs:subClassOf <http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/Review> ;
+                                                                      rdfs:comment "Group of numeric data that expresses the costumer opinion" ;
+                                                                      rdfs:label "Rating" .
+
+
+###  http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/Recommended
+<http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/Recommended> rdf:type owl:Class ;
+                                                                           rdfs:subClassOf <http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/Rating> ;
+                                                                           rdfs:comment "If it is recommended or not by the costumer" ;
+                                                                           rdfs:label "Recommended" .
+
+
+###  http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/Review
+<http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/Review> rdf:type owl:Class ;
+                                                                      rdfs:comment "Review made by a company customer" ;
+                                                                      rdfs:label "Review" .
+
+
+###  http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/SeatComfort
+<http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/SeatComfort> rdf:type owl:Class ;
+                                                                           rdfs:subClassOf <http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/Rating> ;
+                                                                           rdfs:comment "Seat comfort rating" ;
+                                                                           rdfs:label "Seat Comfort" .
+
+
+###  http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/SeatType
+<http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/SeatType> rdf:type owl:Class ;
+                                                                        rdfs:subClassOf <http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/Trip> ;
+                                                                        rdfs:comment "Seat type choosed by the costumer" ;
+                                                                        rdfs:label "Seat Type" .
+
+
+###  http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/Title
+<http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/Title> rdf:type owl:Class ;
+                                                                     rdfs:subClassOf <http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/Review> ;
+                                                                     rdfs:comment "Title of the review" ;
+                                                                     rdfs:label "Title" .
+
+
+###  http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/Traveller
+<http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/Traveller> rdf:type owl:Class ;
+                                                                         rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                                                                           owl:onProperty <http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/writesAReview> ;
+                                                                                           owl:someValuesFrom <http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/Review>
+                                                                                         ] ;
+                                                                         rdfs:comment "Traveller who does a trip and writes a review" ;
+                                                                         rdfs:label "Traveller" .
+
+
+###  http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/Trip
+<http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/Trip> rdf:type owl:Class ;
+                                                                    rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                                                                      owl:onProperty <http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/hasAReview> ;
+                                                                                      owl:someValuesFrom <http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/Review>
+                                                                                    ] ,
+                                                                                    [ rdf:type owl:Restriction ;
+                                                                                      owl:onProperty <http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/hasATraveller> ;
+                                                                                      owl:someValuesFrom <http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/Traveller>
+                                                                                    ] ,
+                                                                                    [ rdf:type owl:Restriction ;
+                                                                                      owl:onProperty <http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/hasAAircraft> ;
+                                                                                      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                                                      owl:onClass <http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/Aircraft>
+                                                                                    ] ;
+                                                                    rdfs:comment "Trip done by a costumer" ;
+                                                                    rdfs:label "Trip" .
+
+
+###  http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/TypeOfTraveller
+<http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/TypeOfTraveller> rdf:type owl:Class ;
+                                                                               rdfs:subClassOf <http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/Traveller> .
+
+
+###  http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/ValueForMoney
+<http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/ValueForMoney> rdf:type owl:Class ;
+                                                                             rdfs:subClassOf <http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/Rating> ;
+                                                                             rdfs:label "Value For Money" .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/Boeing_737-800
+<http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/Boeing_737-800> rdf:type owl:NamedIndividual ,
+                                                                                       <http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/Aircraft> .
+
+
+###  http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/Juan_Pérez
+<http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/Juan_Pérez> rdf:type owl:NamedIndividual ,
+                                                                                   <http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/Traveller> ;
+                                                                          <http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/makesATrip> <http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/ViajeACanarias> ;
+                                                                          <http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/writesAReview> <http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/ViajeACanariasReview> .
+
+
+###  http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/ViajeACanarias
+<http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/ViajeACanarias> rdf:type owl:NamedIndividual ,
+                                                                                       <http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/Trip> ;
+                                                                              <http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/hasAAircraft> <http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/Boeing_737-800> ;
+                                                                              <http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/hasAReview> <http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/ViajeACanariasReview> .
+
+
+###  http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/ViajeACanariasRating
+<http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/ViajeACanariasRating> rdf:type owl:NamedIndividual ,
+                                                                                             <http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/OverallRating> ;
+                                                                                    <http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/hasARating> "5"^^xsd:int .
+
+
+###  http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/ViajeACanariasRevComment
+<http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/ViajeACanariasRevComment> rdf:type owl:NamedIndividual ,
+                                                                                                 <http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/Comment> ;
+                                                                                        <http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/hasAComment> "El vuelo se retrasó dos horas y no me dieron ninguna explicación" .
+
+
+###  http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/ViajeACanariasRevTitle
+<http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/ViajeACanariasRevTitle> rdf:type owl:NamedIndividual ,
+                                                                                               <http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/Title> ;
+                                                                                      <http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/hasATitle> "No lo recomiendo" .
+
+
+###  http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/ViajeACanariasReview
+<http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/ViajeACanariasReview> rdf:type owl:NamedIndividual ,
+                                                                                             <http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/Review> .
+
+
+#################################################################
+#    Rules
+#################################################################
+
+<http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/r> rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+<http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/t> rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+<http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/a> rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+<http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/p> rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+[ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
+   rdfs:comment "The review is verified if the trip has a aircraft" ;
+   rdfs:label "isVerifiedByAircraft" ;
+   rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> <http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/Review> ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/r>
+                                                     ] ;
+                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#classPredicate> <http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/Trip> ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/t>
+                                                                ] ;
+                                                      rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                 rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                                             <http://www.w3.org/2003/11/swrl#classPredicate> <http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/Aircraft> ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/a>
+                                                                           ] ;
+                                                                 rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                            rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                                        <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/hasAAircraft> ;
+                                                                                        <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/t> ;
+                                                                                        <http://www.w3.org/2003/11/swrl#argument2> <http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/a>
+                                                                                      ] ;
+                                                                            rdf:rest rdf:nil
+                                                                          ]
+                                                               ]
+                                                    ]
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/isVerified> ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/r> ;
+                                                       <http://www.w3.org/2003/11/swrl#argument2> "true"^^xsd:boolean
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ]
+ ] .
+
+[ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
+   rdfs:comment "The review is verified if it has a traveler who writes a review" ;
+   rdfs:label "isVerifiedByTraveller" ;
+   rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> <http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/Traveller> ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/t>
+                                                     ] ;
+                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#classPredicate> <http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/Review> ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/r>
+                                                                ] ;
+                                                      rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                 rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                                             <http://www.w3.org/2003/11/swrl#classPredicate> <http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/Trip> ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/p>
+                                                                           ] ;
+                                                                 rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                            rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                                        <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/writesAReview> ;
+                                                                                        <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/t> ;
+                                                                                        <http://www.w3.org/2003/11/swrl#argument2> <http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/r>
+                                                                                      ] ;
+                                                                            rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                                       rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                                                   <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/hasAReview> ;
+                                                                                                   <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/p> ;
+                                                                                                   <http://www.w3.org/2003/11/swrl#argument2> <http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/r>
+                                                                                                 ] ;
+                                                                                       rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                                                  rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                                                              <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/makesATrip> ;
+                                                                                                              <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/t> ;
+                                                                                                              <http://www.w3.org/2003/11/swrl#argument2> <http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/p>
+                                                                                                            ] ;
+                                                                                                  rdf:rest rdf:nil
+                                                                                                ]
+                                                                                     ]
+                                                                          ]
+                                                               ]
+                                                    ]
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/isVerified> ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/adolfo/ontologies/2024/3/PEC2_ej2/r> ;
+                                                       <http://www.w3.org/2003/11/swrl#argument2> "true"^^xsd:boolean
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ]
+ ] .
+
+###  Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/
